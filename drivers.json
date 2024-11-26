@@ -1,0 +1,16 @@
+[
+  {
+    "DriverId": 1,
+    "Name": "Carlos Pon",
+    "IsAvailable": "YES",
+    "CreatedAt": "2024-11-25T23:48:30",
+    "UpdatedAt": "2024-11-25T23:57:15"
+  },
+  {
+    "DriverId": 2,
+    "Name": "Gregori Rasputin",
+    "IsAvailable": "YES",
+    "CreatedAt": "2024-11-25T23:48:54",
+    "UpdatedAt": "2024-11-25T23:48:54"
+  }
+]
