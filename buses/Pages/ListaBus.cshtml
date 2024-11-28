@@ -1,0 +1,28 @@
+@page
+@model buses.Pages.ListaBusModel
+@{
+}
+
+<h1>Buses</h1>
+
+<table class="table">
+
+<tr>
+    <th>ID</th>
+    <th>Código</th>
+    <th>Kilometros</th>
+    <th>Estado</th>
+</tr>
+
+@foreach(var bus in Model.ListaBus)
+{
+    <tr>
+        <td>@bus.IdBus</td>
+        <td>@bus.CodigoBus</td>
+        <td>@bus.Kilometraje</td>
+        <td>@bus.EsHabilitado</td>
+    </tr>
+}
+
+
+</table>
