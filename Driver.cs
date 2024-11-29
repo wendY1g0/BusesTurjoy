@@ -6,6 +6,5 @@ public class Driver
     public int DriverId { get; set; }
     public required string Name { get; set; }
     public string IsAvailable { get; set; } = "YES";
-     public DateTime CreatedAt { get; set; }
-    public DateTime UpdatedAt { get; set; }
+    public int KilometersDriven { get; set; } = 0; 
 }

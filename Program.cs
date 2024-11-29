@@ -95,6 +95,7 @@ public class Program
         {
             Name = name,
             IsAvailable = "YES", // Default availability as a string
+            KilometersDriven = 0 // Initialize kilometers driven as 0
         };
 
         try
@@ -122,7 +123,7 @@ public class Program
 
             foreach (var driver in drivers)
             {
-                Console.WriteLine($"ID: {driver.DriverId}, Name: {driver.Name}, Available: {driver.IsAvailable}, Created At: {driver.CreatedAt}, Updated At: {driver.UpdatedAt}");
+                Console.WriteLine($"ID: {driver.DriverId}, Name: {driver.Name}, Available: {driver.IsAvailable}, Kilometers Driven: {driver.KilometersDriven}");
             }
         }
         catch (Exception ex)
@@ -153,14 +154,11 @@ public class Program
             // Toggle the availability (yes/no)
             driver.IsAvailable = driver.IsAvailable == "YES" ? "NO" : "YES";
 
-            // Manually set the UpdatedAt timestamp to the current time
-            driver.UpdatedAt = DateTime.Now;
-
             try
             {
                 // Save the changes to the database
                 dbContext.SaveChanges();
-                Console.WriteLine($"Driver {driver.Name}'s availability updated to {driver.IsAvailable}. UpdatedAt: {driver.UpdatedAt}.");
+                Console.WriteLine($"Driver {driver.Name}'s availability updated to {driver.IsAvailable}.");
             }
             catch (Exception ex)
             {
