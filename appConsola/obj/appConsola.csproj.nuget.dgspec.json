@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\josel\\appConsola\\appConsola.csproj": {}
+    "C:\\Users\\Kamit\\Documents\\Projects\\Java\\BusesTurjoy\\BusSubmodule\\appConsola\\appConsola.csproj": {}
   },
   "projects": {
-    "C:\\Users\\josel\\appConsola\\appConsola.csproj": {
+    "C:\\Users\\Kamit\\Documents\\Projects\\Java\\BusesTurjoy\\BusSubmodule\\appConsola\\appConsola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\josel\\appConsola\\appConsola.csproj",
+        "projectUniqueName": "C:\\Users\\Kamit\\Documents\\Projects\\Java\\BusesTurjoy\\BusSubmodule\\appConsola\\appConsola.csproj",
         "projectName": "appConsola",
-        "projectPath": "C:\\Users\\josel\\appConsola\\appConsola.csproj",
-        "packagesPath": "C:\\Users\\josel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\josel\\appConsola\\obj\\",
+        "projectPath": "C:\\Users\\Kamit\\Documents\\Projects\\Java\\BusesTurjoy\\BusSubmodule\\appConsola\\appConsola.csproj",
+        "packagesPath": "C:\\Users\\Kamit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kamit\\Documents\\Projects\\Java\\BusesTurjoy\\BusSubmodule\\appConsola\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\josel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Kamit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

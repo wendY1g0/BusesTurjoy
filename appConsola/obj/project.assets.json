@@ -3487,24 +3487,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\josel\\.nuget\\packages\\": {}
+    "C:\\Users\\Kamit\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\josel\\appConsola\\appConsola.csproj",
+      "projectUniqueName": "C:\\Users\\Kamit\\Documents\\Projects\\Java\\BusesTurjoy\\BusSubmodule\\appConsola\\appConsola.csproj",
       "projectName": "appConsola",
-      "projectPath": "C:\\Users\\josel\\appConsola\\appConsola.csproj",
-      "packagesPath": "C:\\Users\\josel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\josel\\appConsola\\obj\\",
+      "projectPath": "C:\\Users\\Kamit\\Documents\\Projects\\Java\\BusesTurjoy\\BusSubmodule\\appConsola\\appConsola.csproj",
+      "packagesPath": "C:\\Users\\Kamit\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kamit\\Documents\\Projects\\Java\\BusesTurjoy\\BusSubmodule\\appConsola\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\josel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Kamit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3581,7 +3583,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"System.Text.Json\" 8.0.4 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
+      "message": "Package 'System.Text.Json' 8.0.4 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
       "libraryId": "System.Text.Json",
       "targetGraphs": [
         "net9.0"

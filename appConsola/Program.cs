@@ -1,24 +1,13 @@
 ﻿﻿using System;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using appConsola;
-using Microsoft.Extensions.Logging;
-using System.Linq;
-using System.IO;
-using System.Text.Json;
-
 
 public partial class Program
-
 {
-
     public static void Main(string[] args)
     {
-
-        
-        
         // Create the host and configure services
         var host = CreateHostBuilder(args).Build();
         
@@ -27,9 +16,12 @@ public partial class Program
 
         if (dbContext == null)
         {
-        Console.WriteLine("No se pudo obtener el contexto de base de datos.");
-        return;
+            Console.WriteLine("No se pudo obtener el contexto de base de datos.");
+            return;
         }
+
+        // Ensure the database is created or migrated
+        dbContext.Database.Migrate(); // Or dbContext.Database.EnsureCreated() for simple use
 
         // Start the console application loop
         RunConsoleApp(dbContext);
@@ -37,34 +29,19 @@ public partial class Program
 
     public static IHostBuilder CreateHostBuilder(string[] args) =>
         Host.CreateDefaultBuilder(args)
-            .ConfigureAppConfiguration((hostingContext, config) =>
-            {
-            config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-            })
             .ConfigureServices((hostContext, services) =>
             {
-                // Add the DbContext and MySQL connection setup
-                services.AddDbContext<TurjoyContext>((serviceProvider, options) =>
-                {
-                    var configuration = serviceProvider.GetRequiredService<IConfiguration>();
-                    options.UseMySQL(configuration.GetConnectionString("turjoy"));
-                });
-
-                // Add logging to the service container
-                services.AddLogging();
-            })
-            .ConfigureLogging((context, logging) =>
-            {
-                logging.AddConsole(); // Ensure logs are output to the console
+                // Add the DbContext directly with MySQL connection string setup
+                services.AddDbContext<TurjoyContext>(options =>
+                    options.UseMySQL("server=localhost;port=3307;database=busmanagementapp;user=alumno;password=pass123"));
             });
 
-    public static void ListarBuses (TurjoyContext dbContext)
+    public static void ListarBuses(TurjoyContext dbContext)
     {
         Console.WriteLine("Listando todos los buses:");
         try
         {
             var buses = dbContext.Bus.ToList();
-
             foreach (var bus in buses)
             {
                 Console.WriteLine($"ID: {bus.IdBus}, Codigo: {bus.CodigoBus}, Disponible: {bus.EsHabilitado}, Kilometros: {bus.Kilometraje}");
@@ -78,8 +55,6 @@ public partial class Program
         Console.ReadKey(); // Pause to allow the user to read the list
     }
 
-
-
     public static void AgregarBuses(TurjoyContext dbContext)
     {
         Console.Write("Ingrese el codigo del bus: ");
@@ -88,13 +63,13 @@ public partial class Program
         var bus = new Bus
         {
             CodigoBus = codigoBus,
-            EsHabilitado = "SI", // Default availability as a int
+            EsHabilitado = "SI", // Default availability as a string
             Kilometraje = 0,
         };
 
         try
         {
-            // Add driver to database and save changes
+            // Add bus to database and save changes
             dbContext.Bus.Add(bus);
             dbContext.SaveChanges();
             Console.WriteLine($"Bus {codigoBus} agregado correctamente.");
@@ -107,7 +82,7 @@ public partial class Program
         Console.ReadKey(); // Pause to allow the user to read the message
     }
 
-     public static void CambiarEstado(TurjoyContext dbContext)
+    public static void CambiarEstado(TurjoyContext dbContext)
     {
         Console.Write("Ingrese la ID del bus para actualizar su estado: ");
         int IdBus;
@@ -126,7 +101,6 @@ public partial class Program
             // Toggle the availability (yes/no)
             bus.EsHabilitado = bus.EsHabilitado == "SI" ? "NO" : "SI";
 
-
             try
             {
                 // Save the changes to the database
@@ -140,7 +114,7 @@ public partial class Program
         }
         else
         {
-            Console.WriteLine("bus not found.");
+            Console.WriteLine("Bus no encontrado.");
         }
 
         Console.ReadKey(); // Pause for user to read the message
@@ -182,6 +156,4 @@ public partial class Program
             }
         }
     }
-
-
 }
