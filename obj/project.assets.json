@@ -3625,11 +3625,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kamit\\Documents\\Projects\\Programing\\Turjoy\\personalMantencion\\personalMantencion.csproj",
+      "projectUniqueName": "C:\\Users\\Kamit\\Documents\\Projects\\Java\\BusesTurjoy\\personalMantencion.csproj",
       "projectName": "personalMantencion",
-      "projectPath": "C:\\Users\\Kamit\\Documents\\Projects\\Programing\\Turjoy\\personalMantencion\\personalMantencion.csproj",
+      "projectPath": "C:\\Users\\Kamit\\Documents\\Projects\\Java\\BusesTurjoy\\personalMantencion.csproj",
       "packagesPath": "C:\\Users\\Kamit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kamit\\Documents\\Projects\\Programing\\Turjoy\\personalMantencion\\obj\\",
+      "outputPath": "C:\\Users\\Kamit\\Documents\\Projects\\Java\\BusesTurjoy\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kamit\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IWZgKOonWEY=",
+  "dgSpecHash": "G++mcNegOU0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kamit\\Documents\\Projects\\Programing\\Turjoy\\personalMantencion\\personalMantencion.csproj",
+  "projectFilePath": "C:\\Users\\Kamit\\Documents\\Projects\\Java\\BusesTurjoy\\personalMantencion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kamit\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\Kamit\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
