@@ -1,0 +1,29 @@
+﻿@page
+@model Buses.Pages.listaChoferModel
+@{
+}
+
+<h1>Lista de Choferes</h1>
+
+<table class="table">
+    <tr>
+        <th>ID Choferes</th>
+        <th>Rut</th>
+        <th>Nombre</th>
+        <th>Kilometraje </th>
+        <th>Estado </th>
+
+    </tr>
+
+    @foreach (var chofer in Model.listaChofer)
+    {
+        <tr>
+            <td>@chofer.IdChofer</td>
+            <td>@chofer.Rut </td>
+            <td>@chofer.Nombre </td>
+            <td>@chofer.Kilometraje</td>
+            <td>@(chofer.EsHabilitado == 1 ? "Disponible" : "No disponible")</td>
+
+        </tr>
+    }
+</table>

@@ -1,0 +1,71 @@
+﻿@page
+@model Buses.Pages.RegistroViajeModel
+@{
+    ViewData["Title"] = "Registrar Viaje";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="ChoferId">Seleccione Chofer</label>
+        <select class="form-control" id="ChoferId" name="ChoferId">
+            <option value="">Seleccione un chofer</option>
+            @foreach (var chofer in Model.ListaChoferes)
+            {
+                <option value="@chofer.IdChofer">@chofer.Nombre</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="BusId">Seleccione Bus</label>
+        <select class="form-control" id="BusId" name="BusId">
+            <option value="">Seleccione un bus</option>
+            @foreach (var bus in Model.ListaBuses)
+            {
+                <option value="@bus.IdBus">@bus.CodigoBus</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="TramoId">Seleccione Tramo</label>
+        <select class="form-control" id="TramoId" name="TramoId">
+            <option value="">Seleccione un tramo</option>
+            @foreach (var tramo in Model.ListaTramos)
+            {
+                <option value="@tramo.IdTramo">@tramo.Origen - @tramo.Destino</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrar Viaje</button>
+</form>
+
+<h3>Viajes Registrados</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Origen</th>
+            <th>Destino</th>
+            <th>Chofer</th>
+            <th>Bus</th>
+            <th>Distancia</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var viaje in Model.ListaViajes)
+        {
+            <tr>
+                <td>@viaje.Fecha.ToString("yyyy-MM-dd")</td>
+                <td>@viaje.Tramo.Origen</td>
+                <td>@viaje.Tramo.Destino</td>
+                <td>@viaje.Chofer.Nombre</td>
+                <td>@viaje.Bus.CodigoBus</td>
+                <td>@viaje.Tramo.Distancia</td>
+            </tr>
+        }
+    </tbody>
+</table>
