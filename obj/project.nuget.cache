@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TzDCAOeMF4M=",
+  "dgSpecHash": "HPevpppQDAs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\wen20\\pr. integrador\\buses\\buses.csproj",
+  "projectFilePath": "C:\\Users\\wen20\\Documents\\GitHub\\BusesTurjoy\\buses.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wen20\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\wen20\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

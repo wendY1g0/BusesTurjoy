@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wen20\\pr. integrador\\buses\\buses.csproj": {}
+    "C:\\Users\\wen20\\Documents\\GitHub\\BusesTurjoy\\buses.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wen20\\pr. integrador\\buses\\buses.csproj": {
+    "C:\\Users\\wen20\\Documents\\GitHub\\BusesTurjoy\\buses.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wen20\\pr. integrador\\buses\\buses.csproj",
+        "projectUniqueName": "C:\\Users\\wen20\\Documents\\GitHub\\BusesTurjoy\\buses.csproj",
         "projectName": "buses",
-        "projectPath": "C:\\Users\\wen20\\pr. integrador\\buses\\buses.csproj",
+        "projectPath": "C:\\Users\\wen20\\Documents\\GitHub\\BusesTurjoy\\buses.csproj",
         "packagesPath": "C:\\Users\\wen20\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wen20\\pr. integrador\\buses\\obj\\",
+        "outputPath": "C:\\Users\\wen20\\Documents\\GitHub\\BusesTurjoy\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\wen20\\AppData\\Roaming\\NuGet\\NuGet.Config",
